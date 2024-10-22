@@ -24,6 +24,31 @@
                 link</a>
         </div>
     </div>
+
+    <script>
+        
+        const superLinkElement = document.getElementById("super_link");
+        console.log(superLinkElement);
+
+        const cardLinkEls = document.querySelectorAll('.card-link');
+        cardLinkEls.forEach(element => {
+            element.textContent = 'Ссылка';
+        });
+
+        const cardLinkEls1 = document.querySelectorAll('.card-body .card-link');
+        cardLinkEls1.forEach(element => {
+            console.log(element);
+        });
+
+        document.querySelectorAll('*').forEach(element => {
+            if (element.hasAttribute('data-number') && element.getAttribute('data-number') === 50) {
+                console.log(element);
+            }          
+        });
+
+        console.log(document.getElementsByTagName('title'));
+
+    </script>
 </body>
 
 </html>
