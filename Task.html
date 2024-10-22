@@ -46,7 +46,16 @@
             }          
         });
 
-        console.log(document.getElementsByTagName('title'));
+        console.log(document.querySelector('title').textContent);
+
+        const cardTitleEl = document.querySelector('.card-title');
+        console.log(cardTitleEl.parentElement);
+
+        const textEl = document.createElement('p');
+        textEl.textContent = "Привет";
+        document.querySelector('.card').append(textEl);
+
+        document.querySelector('h6').remove();
 
     </script>
 </body>
